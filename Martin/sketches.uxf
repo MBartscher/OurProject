@@ -1,3 +1,66 @@
-<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>90</x><y>130</y><w>460</w><h>300</h></coordinates><panel_attributes>_home window_
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>mockup</help_text><element><id>UMLClass</id><coordinates><x>0</x><y>210</y><w>570</w><h>300</h></coordinates><panel_attributes>_home window_
 -
-</panel_attributes><additional_attributes></additional_attributes></element></diagram>
+
+group=group-11</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>20</x><y>350</y><w>530</w><h>90</h></coordinates><panel_attributes>output trainings plan
+bg=blue
+group=group-9</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>220</x><y>280</y><w>90</w><h>30</h></coordinates><panel_attributes>Hello, {user}
+style=wordwrap
+group=group-11</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>550</x><y>210</y><w>20</w><h>20</h></coordinates><panel_attributes>X
+group=group-11</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>60</x><y>1320</y><w>100</w><h>30</h></coordinates><panel_attributes>btn_change_user
+group=group-18</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>790</y><w>100</w><h>30</h></coordinates><panel_attributes>btn_enter_unit
+group=group-10</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>1100</y><w>100</w><h>30</h></coordinates><panel_attributes>btn_enter_bdprm
+group=group-16</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>390</x><y>450</y><w>160</w><h>30</h></coordinates><panel_attributes>btn_generate_trainingsplan
+group=group-9</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>230</y><w>100</w><h>30</h></coordinates><panel_attributes>home
+bg=yellow
+group=group-11</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>230</y><w>100</w><h>30</h></coordinates><panel_attributes>unit
+group=group-11</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>40</x><y>650</y><w>510</w><h>110</h></coordinates><panel_attributes>output last trainings unit
+bg=blue
+group=group-10</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>200</x><y>230</y><w>100</w><h>30</h></coordinates><panel_attributes>params
+group=group-11</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>300</x><y>230</y><w>100</w><h>30</h></coordinates><panel_attributes>user
+group=group-11</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>220</x><y>600</y><w>90</w><h>30</h></coordinates><panel_attributes>Hello, {user}
+style=wordwrap
+group=group-12</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>550</x><y>530</y><w>20</w><h>20</h></coordinates><panel_attributes>X
+group=group-12</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>550</y><w>100</w><h>30</h></coordinates><panel_attributes>home
+group=group-12</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>550</y><w>100</w><h>30</h></coordinates><panel_attributes>unit
+bg=yellow
+group=group-12</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>200</x><y>550</y><w>100</w><h>30</h></coordinates><panel_attributes>params
+group=group-12</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>300</x><y>550</y><w>100</w><h>30</h></coordinates><panel_attributes>user
+group=group-12</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>530</y><w>570</w><h>300</h></coordinates><panel_attributes>_home window_
+-
+
+group=group-12</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>220</x><y>920</y><w>90</w><h>30</h></coordinates><panel_attributes>Hello, {user}
+style=wordwrap
+group=group-13</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>550</x><y>850</y><w>20</w><h>20</h></coordinates><panel_attributes>X
+group=group-13</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>870</y><w>100</w><h>30</h></coordinates><panel_attributes>home
+group=group-13</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>870</y><w>100</w><h>30</h></coordinates><panel_attributes>unit
+group=group-13</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>200</x><y>870</y><w>100</w><h>30</h></coordinates><panel_attributes>params
+bg=yellow
+group=group-13</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>300</x><y>870</y><w>100</w><h>30</h></coordinates><panel_attributes>user
+group=group-13</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>850</y><w>570</w><h>300</h></coordinates><panel_attributes>_home window_
+-
+
+group=group-13</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>10</x><y>950</y><w>280</w><h>140</h></coordinates><panel_attributes>output last body params
+bg=blue
+group=group-16</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>300</x><y>950</y><w>260</w><h>140</h></coordinates><panel_attributes>output selected goals
+bg=blue
+group=group-16</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>370</x><y>1100</y><w>110</w><h>30</h></coordinates><panel_attributes>btn_change_goals
+group=group-16</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>170</x><y>1320</y><w>100</w><h>30</h></coordinates><panel_attributes>btn_new_user
+group=group-18</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>220</x><y>1240</y><w>90</w><h>30</h></coordinates><panel_attributes>Hello, {user}
+style=wordwrap
+group=group-17</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>550</x><y>1170</y><w>20</w><h>20</h></coordinates><panel_attributes>X
+group=group-17</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>1190</y><w>100</w><h>30</h></coordinates><panel_attributes>home
+group=group-17</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>1190</y><w>100</w><h>30</h></coordinates><panel_attributes>unit
+group=group-17</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>200</x><y>1190</y><w>100</w><h>30</h></coordinates><panel_attributes>params
+group=group-17</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>300</x><y>1190</y><w>100</w><h>30</h></coordinates><panel_attributes>user
+bg=yellow
+group=group-17</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>1170</y><w>570</w><h>300</h></coordinates><panel_attributes>_home window_
+-
+
+group=group-17</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>1320</y><w>100</w><h>30</h></coordinates><panel_attributes>btn_delete_user
+group=group-18</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>460</y><w>100</w><h>30</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>80;10;10;10</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>620</x><y>430</y><w>140</w><h>80</h></coordinates><panel_attributes>KI generates
+new trainings plan,
+will be saved
+to the db</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>550</x><y>210</y><w>110</w><h>30</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>640</x><y>190</y><w>200</w><h>90</h></coordinates><panel_attributes>exits app,
+if 'stay logged in' set:
+remember user for next start
+else: log user out</panel_attributes><additional_attributes></additional_attributes></element></diagram>
