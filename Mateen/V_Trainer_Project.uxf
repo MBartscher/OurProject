@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1089</x>
+      <y>225</y>
+      <w>189</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>_USERS_
+--
+User_ID (PK)
+TP_ID (FK)
+Personal Details_abk: P.D
+Health Parameters_abk: H.P
+Body Parameters_abk: B.P
+Goal = Plan_Type_Traits
+Available Time_abk: A.T</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>945</x>
+      <y>45</y>
+      <w>126</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>_Excersices_
+-
+Exercise_ID (PK)
+Name</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>432</x>
+      <y>252</y>
+      <w>189</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>_Trainiing sessions (TS)_
+--
+TS_ID (PK)
+Set_ID (FK)
+duration (Time)
+Calories_burn
+
+group=9</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>783</x>
+      <y>603</y>
+      <w>189</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>_Trainiing Plan (TP)_
+--
+TP_ID (PK)
+TSG_ID (FK)
+Type_ID (FK)
+User_ID (FK)
+Start_Date (Time)
+End_Date (Time)
+
+group=8</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>621</x>
+      <y>252</y>
+      <w>135</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Note..
+bg=yellow
+Ein Training,
+welches ab einem
+Tag absolviert
+werden kann.
+group=9</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>648</x>
+      <y>648</y>
+      <w>135</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>Note..
+bg=yellow
+Ein für einen oder
+mehrere Monate
+erstelter Plan.
+group=8</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>846</x>
+      <y>99</y>
+      <w>162</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1161</x>
+      <y>351</y>
+      <w>90</w>
+      <h>387</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>80.0;410.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>666</x>
+      <y>90</y>
+      <w>189</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>_Exercise_set (Set)_
+--
+Set_ID (PK)
+Exercise_ID (FK)
+Repetitions
+estimated calorie burn
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>999</x>
+      <y>720</y>
+      <w>324</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>_Plan_Type_
+--
+Type_ID (PK)
+Type_Name (strength, cardio
+Mobility, HIIT)
+Traits (weight loss, gain weight ..etc)
+Weight (bodyw., 10KG)
+Equipments
+Sport_Type(swimming, jogging, yoga, calisthanics...)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>189</y>
+      <w>252</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;260.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>693</x>
+      <y>531</y>
+      <w>189</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>190.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>963</x>
+      <y>702</y>
+      <w>144</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>999</x>
+      <y>585</y>
+      <w>153</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>If Plan_Type_Traits = Goal =&gt; bestimmter Trainingsplan
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1296</x>
+      <y>468</y>
+      <w>144</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>_BSI = w/H^3_
+-
+User_ID (FK)
+weight
+height
+age
+sex
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>135</x>
+      <y>441</y>
+      <w>225</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>_GOAL_
+-
+Goal_ID (PK)
+User_ID (FK)
+Goal_description
+Get in shape (True/False)
+Lose weight (True/False)
+Lift more weight (True/False)
+Improve overall health (True/False)
+Stretch More Often(True/False)
+Improve Balance (True/False)
+Improve Flexibility (True/False)
+
+
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>378</x>
+      <y>450</y>
+      <w>153</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>das Goal bestimmmt,
+welche sessions ich übe
+bg=blue
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1269</x>
+      <y>342</y>
+      <w>99</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>90.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>630</x>
+      <y>459</y>
+      <w>171</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>_Training_sessions_Goal(TSG)_
+-
+TSG_ID (PK)
+TS_ID (FK)
+Goal_ID (FK)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>351</x>
+      <y>522</y>
+      <w>297</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>310.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>522</x>
+      <y>378</y>
+      <w>189</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>190.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1314</x>
+      <y>567</y>
+      <w>63</w>
+      <h>225</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;230.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>1035</x>
+      <y>225</y>
+      <w>54</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>Actor</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
