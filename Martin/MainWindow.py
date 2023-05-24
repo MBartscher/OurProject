@@ -73,30 +73,49 @@ class Home(QMainWindow):
         # params column body
         self.params_body = QWidget()
         self.params_body_layout = QVBoxLayout()
+        # params ouput body
         self.out_body_params = QWidget()
         # out_body_params needs to be filled with the relevant elements...
         self.params_body_layout.addWidget(self.out_body_params)
-        self.params_insert_body_params = QPushButton("insert body params")
-        self.params_body_layout.addWidget(self.params_insert_body_params)
+        # params button insert body params
+        self.params_btn_insert_body_params = QPushButton("insert body params")
+        self.params_body_layout.addWidget(self.params_btn_insert_body_params)
         self.params_body.setLayout(self.params_body_layout)
         self.params_layout.addWidget(self.params_body)
+        # params column goals
         self.params_goals = QWidget()
         self.params_goals_layout = QVBoxLayout()
-        # missing contents params goals
+        # params output goals
+        self.out_goals = QWidget()
+        # out_goals needs to be filled with the relevant elements...
+        self.params_goals_layout.addWidget(self.out_goals)
+        # params button change goals
+        self.params_btn_change_goals = QPushButton("change goals")
+        self.params_goals_layout.addWidget(self.params_btn_change_goals)
         self.params_goals.setLayout(self.params_goals_layout)
         self.params_layout.addWidget(self.params_goals)
+        self.params.setLayout(self.params_layout)
         self.params_tab_layout.addWidget(self.params)
         self.params_tab.setLayout(self.params_tab_layout)
         self.tab_widget.addTab(self.params_tab, "params")
-        # other tabs
-        ###
+        # user tab
+        self.user_tab = QWidget()
+        self.user_tab_layout = QVBoxLayout()
+        # user welcome label
+        self.user_welcoming = Welcome_Label()
+        self.user_tab_layout.addWidget()
+        # contents user tab
+        self.user_tab.setLayout(self.user_tab_layout)
+        self.tab_widget.addTab(self.user_tab)
         # tab widget to central widget
         self.setCentralWidget(self.tab_widget)
         # add actions to widgets
         self.home_btn_gen_plan.clicked.connect(self.generate_trainings_plan)
         self.session_btn_change.clicked.connect(self.change_last_session)
         self.session_btn_insert.clicked.connect(self.insert_session)
-        self.params_insert_body_params.clicked.connect(self.insert_body_params)
+        self.params_btn_insert_body_params.clicked.connect(
+            self.insert_body_params)
+        self.params_btn_change_goals.clicked.connect(self.change_goals)
 
     def generate_trainings_plan(self):
         pass
@@ -108,6 +127,9 @@ class Home(QMainWindow):
         pass
 
     def insert_body_params(self):
+        pass
+
+    def change_goals(self):
         pass
 
 
