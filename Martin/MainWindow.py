@@ -103,10 +103,20 @@ class Home(QMainWindow):
         self.user_tab_layout = QVBoxLayout()
         # user welcome label
         self.user_welcoming = Welcome_Label()
-        self.user_tab_layout.addWidget()
-        # contents user tab
+        self.user_tab_layout.addWidget(self.user_welcoming)
+        # user buttons
+        self.user_btns = QWidget()
+        self.user_btns_layout = QHBoxLayout()
+        self.user_btn_change_user = QPushButton("change user")
+        self.user_btns_layout.addWidget(self.user_btn_change_user)
+        self.user_btn_new_user = QPushButton("new user")
+        self.user_btns_layout.addWidget(self.user_btn_new_user)
+        self.user_btn_delete_user = QPushButton("delete user")
+        self.user_btns_layout.addWidget(self.user_btn_delete_user)
+        self.user_btns.setLayout(self.user_btns_layout)
+        self.user_tab_layout.addWidget(self.user_btns)
         self.user_tab.setLayout(self.user_tab_layout)
-        self.tab_widget.addTab(self.user_tab)
+        self.tab_widget.addTab(self.user_tab, "user")
         # tab widget to central widget
         self.setCentralWidget(self.tab_widget)
         # add actions to widgets
@@ -116,6 +126,9 @@ class Home(QMainWindow):
         self.params_btn_insert_body_params.clicked.connect(
             self.insert_body_params)
         self.params_btn_change_goals.clicked.connect(self.change_goals)
+        self.user_btn_change_user.clicked.connect(self.change_user)
+        self.user_btn_new_user.clicked.connect(self.new_user)
+        self.user_btn_delete_user.clicked.connect(self.delete_user)
 
     def generate_trainings_plan(self):
         pass
@@ -130,6 +143,15 @@ class Home(QMainWindow):
         pass
 
     def change_goals(self):
+        pass
+
+    def change_user(self):
+        pass
+
+    def new_user(self):
+        pass
+
+    def delete_user(self):
         pass
 
 
