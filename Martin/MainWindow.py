@@ -52,6 +52,7 @@ class Home(QMainWindow):
         self.home_btns_layout.addItem(QSpacerItem(0, 0))
         # button generate trainings plan
         self.home_btn_gen_plan = QPushButton("generate trainings plan")
+        # self.home_btn_gen_plan.sizePolicy()
         self.home_btns_layout.addWidget(self.home_btn_gen_plan)
         self.home_btns.setLayout(self.home_btns_layout)
         self.home_tab_layout.addWidget(self.home_btns)
