@@ -1,4 +1,15 @@
-from PyQt6.QtWidgets import QApplication, QMainWindow, QTabWidget, QLabel, QWidget, QVBoxLayout, QHBoxLayout, QFormLayout, QSpacerItem, QPushButton
+from PyQt6.QtWidgets import (
+    QApplication,
+    QMainWindow,
+    QTabWidget,
+    QLabel,
+    QWidget,
+    QVBoxLayout,
+    QHBoxLayout,
+    QFormLayout,
+    QSpacerItem,
+    QPushButton,
+)
 from PyQt6.QtCore import Qt
 
 username = "test"
@@ -123,8 +134,7 @@ class Home(QMainWindow):
         self.home_btn_gen_plan.clicked.connect(self.generate_trainings_plan)
         self.session_btn_change.clicked.connect(self.change_last_session)
         self.session_btn_insert.clicked.connect(self.insert_session)
-        self.params_btn_insert_body_params.clicked.connect(
-            self.insert_body_params)
+        self.params_btn_insert_body_params.clicked.connect(self.insert_body_params)
         self.params_btn_change_goals.clicked.connect(self.change_goals)
         self.user_btn_change_user.clicked.connect(self.change_user)
         self.user_btn_new_user.clicked.connect(self.new_user)
