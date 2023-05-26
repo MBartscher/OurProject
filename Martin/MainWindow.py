@@ -6,13 +6,14 @@ from PyQt6.QtWidgets import (
     QWidget,
     QVBoxLayout,
     QHBoxLayout,
-    QFormLayout,
     QSpacerItem,
     QPushButton,
+    QFrame,
 )
 from PyQt6.QtCore import Qt
 
 username = "test"
+output_goals = "goal1\ngoal2\ngoal3\ngoal4"
 
 
 class Welcome_Label(QLabel):
@@ -20,6 +21,12 @@ class Welcome_Label(QLabel):
         super().__init__()
         self.setText(f"Hello {username}")
         self.setAlignment(Qt.AlignmentFlag.AlignHCenter)
+
+
+# class Title_Label(QLabel):
+#     def __init__(self, title: str) -> None:
+#         super().__init__()
+#         self.setText(title)
 
 
 class Home(QMainWindow):
@@ -34,6 +41,8 @@ class Home(QMainWindow):
         self.home_welcoming = Welcome_Label()
         self.home_tab_layout.addWidget(self.home_welcoming)
         # home output trainings plan
+        self.home_title_train_plan = QLabel("Trainingsplan")
+        self.home_tab_layout.addWidget(self.home_title_train_plan)
         self.out_train_plan = QWidget()
         # out_train_plan needs to be filled with the relevant elements...
         self.home_tab_layout.addWidget(self.out_train_plan)
@@ -54,7 +63,9 @@ class Home(QMainWindow):
         # session welcome label
         self.session_welcoming = Welcome_Label()
         self.session_tab_layout.addWidget(self.session_welcoming)
-        # session output last session
+        # session output last
+        self.session_title_out_last = QLabel("last session")
+        self.session_tab_layout.addWidget(self.session_title_out_last)
         self.out_last_session = QWidget()
         # out_last_session needs to be filled with the relevant elements...
         self.session_tab_layout.addWidget(self.out_last_session)
@@ -85,6 +96,8 @@ class Home(QMainWindow):
         self.params_body = QWidget()
         self.params_body_layout = QVBoxLayout()
         # params ouput body
+        self.params_title_body = QLabel("last body params")
+        self.params_body_layout.addWidget(self.params_title_body)
         self.out_body_params = QWidget()
         # out_body_params needs to be filled with the relevant elements...
         self.params_body_layout.addWidget(self.out_body_params)
@@ -97,8 +110,10 @@ class Home(QMainWindow):
         self.params_goals = QWidget()
         self.params_goals_layout = QVBoxLayout()
         # params output goals
-        self.out_goals = QWidget()
-        # out_goals needs to be filled with the relevant elements...
+        self.params_title_goals = QLabel("selected goals")
+        self.params_goals_layout.addWidget(self.params_title_goals)
+        self.out_goals = QLabel(output_goals)
+        self.out_goals.setFrameShape(QFrame.Shape.Box)
         self.params_goals_layout.addWidget(self.out_goals)
         # params button change goals
         self.params_btn_change_goals = QPushButton("change goals")
