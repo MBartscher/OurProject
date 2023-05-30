@@ -8,27 +8,25 @@ from PyQt6.QtWidgets import (
     QHBoxLayout,
     QSpacerItem,
     QPushButton,
-    QFrame,
-    QSizePolicy,
+    QFrame,QDialog
 )
 from PyQt6.QtCore import Qt
+from dialog_insert_session import Ui_Dialog as Ui_Dialog_insert_session
+from dialog_insert_unit import Ui_Dialog as Ui_Dialog_insert_unit
 
 username = "test"
 output_goals = "goal1\ngoal2\ngoal3\ngoal4"
 
+class Dialog_insert_session(QDialog,Ui_Dialog_insert_session):
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
 
 class Welcome_Label(QLabel):
     def __init__(self) -> None:
         super().__init__()
         self.setText(f"Hello {username}")
         self.setAlignment(Qt.AlignmentFlag.AlignHCenter)
-
-
-# class Title_Label(QLabel):
-#     def __init__(self, title: str) -> None:
-#         super().__init__()
-#         self.setText(title)
-
 
 class Home(QMainWindow):
     def __init__(self) -> None:
@@ -53,9 +51,6 @@ class Home(QMainWindow):
         self.home_btns_layout.addItem(QSpacerItem(0, 0))
         # button generate trainings plan
         self.home_btn_gen_plan = QPushButton("generate trainings plan")
-        # self.home_btn_gen_plan.sizePolicy(
-        #     QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed
-        # )
         self.home_btns_layout.addWidget(self.home_btn_gen_plan)
         self.home_btns.setLayout(self.home_btns_layout)
         self.home_tab_layout.addWidget(self.home_btns)
@@ -166,7 +161,8 @@ class Home(QMainWindow):
         pass
 
     def insert_session(self):
-        pass
+        dialog_insert_session=Dialog_insert_session()
+        dialog_insert_session.exec()
 
     def insert_body_params(self):
         pass
