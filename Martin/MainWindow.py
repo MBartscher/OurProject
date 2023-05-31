@@ -8,7 +8,8 @@ from PyQt6.QtWidgets import (
     QHBoxLayout,
     QSpacerItem,
     QPushButton,
-    QFrame,QDialog
+    QFrame,
+    QDialog,
 )
 from PyQt6.QtCore import Qt
 from dialog_insert_session import Ui_Dialog as Ui_Dialog_insert_session
@@ -17,16 +18,54 @@ from dialog_insert_unit import Ui_Dialog as Ui_Dialog_insert_unit
 username = "test"
 output_goals = "goal1\ngoal2\ngoal3\ngoal4"
 
-class Dialog_insert_session(QDialog,Ui_Dialog_insert_session):
+
+class Dialog_insert_unit(QDialog, Ui_Dialog_insert_unit):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+        self.accepted.connect(self.accept)
+        # self.rejected.connect(self.reject)
+
+    def accept(self) -> None:
+        super().accept()
+        pass
+
+    # def reject(self):
+    #     super().reject()
+    #     pass
+
+
+class Dialog_insert_session(QDialog, Ui_Dialog_insert_session):
+    def __init__(self, change: bool = False):
+        super().__init__()
+        self.setupUi(self)
+        self.__change = change
+        self.btn_insert_unit.clicked.connect(self.insert_unit)
+        self.accepted.connect(self.accept)
+        # self.rejected.connect(self.reject)
+
+    def insert_unit(self):
+        dialog_insert_unit = Dialog_insert_unit()
+        dialog_insert_unit.exec()
+
+    def accept(self):
+        super().accepted()
+        if self.__change:
+            pass
+        else:
+            pass
+
+    # def reject(self):
+    #     super().reject()
+    #     pass
+
 
 class Welcome_Label(QLabel):
     def __init__(self) -> None:
         super().__init__()
         self.setText(f"Hello {username}")
         self.setAlignment(Qt.AlignmentFlag.AlignHCenter)
+
 
 class Home(QMainWindow):
     def __init__(self) -> None:
@@ -153,15 +192,20 @@ class Home(QMainWindow):
         self.user_btn_change_user.clicked.connect(self.change_user)
         self.user_btn_new_user.clicked.connect(self.new_user)
         self.user_btn_delete_user.clicked.connect(self.delete_user)
+        print(self.sizeHint())
+        print(self.sizePolicy().horizontalPolicy())
+        print(self.sizePolicy().verticalPolicy())
 
     def generate_trainings_plan(self):
         pass
 
     def change_last_session(self):
-        pass
+        dialog_insert_session = Dialog_insert_session(change=True)
+        dialog_insert_session.setWindowTitle("change session")
+        dialog_insert_session.exec()
 
     def insert_session(self):
-        dialog_insert_session=Dialog_insert_session()
+        dialog_insert_session = Dialog_insert_session()
         dialog_insert_session.exec()
 
     def insert_body_params(self):

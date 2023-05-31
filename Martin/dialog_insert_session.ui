@@ -24,7 +24,14 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QWidget" name="output_in_session_entered_units" native="true"/>
+     <widget class="QWidget" name="output_in_session_entered_units" native="true">
+      <property name="baseSize">
+       <size>
+        <width>400</width>
+        <height>0</height>
+       </size>
+      </property>
+     </widget>
     </item>
     <item>
      <widget class="QWidget" name="btns" native="true">
@@ -46,7 +53,7 @@
           <property name="sizeHint" stdset="0">
            <size>
             <width>40</width>
-            <height>20</height>
+            <height>24</height>
            </size>
           </property>
          </spacer>
@@ -58,6 +65,18 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>75</width>
+            <height>24</height>
+           </size>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>75</width>
+            <height>24</height>
+           </size>
           </property>
           <property name="text">
            <string>insert unit</string>
@@ -71,6 +90,18 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>156</width>
+            <height>24</height>
+           </size>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>156</width>
+            <height>24</height>
+           </size>
           </property>
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
