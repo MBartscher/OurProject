@@ -18,19 +18,14 @@ from dialog_insert_unit import Ui_Dialog as Ui_Dialog_insert_unit
 
 username = "test"
 output_goals = "goal1\ngoal2\ngoal3\ngoal4"
-# SizePolicies
-
-size_policy_btn_container = QSizePolicy()
-size_policy_btn_container.setVerticalPolicy(QSizePolicy.Policy.Fixed)
-size_policy_btn_container.setHorizontalPolicy(QSizePolicy.Policy.Minimum)
 
 
 class Button_Container(QWidget):
     def __init__(self):
         super().__init__()
         self.size_polizy = QSizePolicy()
-        self.size_polizy.setHorizontalPolicy(QSizePolicy.Policy.Fixed)
-        self.size_polizy.setVerticalPolicy(QSizePolicy.Policy.Minimum)
+        self.size_polizy.setHorizontalPolicy(QSizePolicy.Policy.Minimum)
+        self.size_polizy.setVerticalPolicy(QSizePolicy.Policy.Fixed)
         self.setSizePolicy(self.size_polizy)
 
 
@@ -65,7 +60,6 @@ class Dialog_insert_session(QDialog, Ui_Dialog_insert_session):
         super().__init__()
         self.setupUi(self)
         self.__change = change
-        self.siz
         self.btn_insert_unit.clicked.connect(self.insert_unit)
         self.accepted.connect(self.accept)
         # self.rejected.connect(self.reject)
@@ -91,7 +85,10 @@ class Welcome_Label(QLabel):
         super().__init__()
         self.setText(f"Hello {username}")
         self.setAlignment(Qt.AlignmentFlag.AlignHCenter)
-        self.setSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Fixed)
+        self.size_policy = QSizePolicy()
+        self.size_policy.setHorizontalPolicy(QSizePolicy.Policy.Minimum)
+        self.size_policy.setVerticalPolicy(QSizePolicy.Policy.Fixed)
+        self.setSizePolicy(self.size_policy)
 
 
 class Home(QMainWindow):
@@ -113,7 +110,6 @@ class Home(QMainWindow):
         self.home_tab_layout.addWidget(self.out_train_plan)
         # home buttons
         self.home_btns = Button_Container()
-        self.home_btns.setSizePolicy(size_policy_btn_container)
         self.home_btns_layout = QHBoxLayout()
         self.home_btns_layout.addItem(QSpacerItem(0, 0))
         # button generate trainings plan
@@ -137,7 +133,6 @@ class Home(QMainWindow):
         self.session_tab_layout.addWidget(self.out_last_session)
         # session buttons
         self.session_btns = Button_Container()
-        self.session_btns.setSizePolicy(size_policy_btn_container)
         self.session_btns_layout = QHBoxLayout()
         self.session_btns_layout.addItem(QSpacerItem(0, 0))
         # button change last session
@@ -157,38 +152,34 @@ class Home(QMainWindow):
         self.params_welcoming = Welcome_Label()
         self.params_tab_layout.addWidget(self.params_welcoming)
         # params 2 columns
-        self.params = QWidget()
-        self.params_layout = QHBoxLayout()
-        # params column body
-        self.params_body = QWidget()
-        self.params_body_layout = QVBoxLayout()
-        # params ouput body
+        # params titles
+        self.params_titles = QWidget()
+        self.params_titles_layout = QHBoxLayout()
         self.params_title_body = QLabel("last body params")
-        self.params_body_layout.addWidget(self.params_title_body)
-        self.out_body_params = QWidget()
-        # out_body_params needs to be filled with the relevant elements...
-        self.params_body_layout.addWidget(self.out_body_params)
-        # params button insert body params
-        self.params_btn_insert_body_params = Buttons("insert body params")
-        self.params_body_layout.addWidget(self.params_btn_insert_body_params)
-        self.params_body.setLayout(self.params_body_layout)
-        self.params_layout.addWidget(self.params_body)
-        # params column goals
-        self.params_goals = QWidget()
-        self.params_goals_layout = QVBoxLayout()
-        # params output goals
+        self.params_titles_layout.addWidget(self.params_title_body)
         self.params_title_goals = QLabel("selected goals")
-        self.params_goals_layout.addWidget(self.params_title_goals)
+        self.params_titles_layout.addWidget(self.params_title_goals)
+        self.params_titles.setLayout(self.params_titles_layout)
+        self.params_tab_layout.addWidget(self.params_titles)
+        # params outputs
+        self.params_outputs = QWidget()
+        self.params_outputs_layout = QHBoxLayout()
+        self.out_body_params = QWidget()
+        self.params_outputs_layout.addWidget(self.out_body_params)
         self.out_goals = QLabel(output_goals)
         self.out_goals.setFrameShape(QFrame.Shape.Box)
-        self.params_goals_layout.addWidget(self.out_goals)
-        # params button change goals
+        self.params_outputs_layout.addWidget(self.out_goals)
+        self.params_outputs.setLayout(self.params_outputs_layout)
+        self.params_tab_layout.addWidget(self.params_outputs)
+        # params btns
+        self.params_btns = Button_Container()
+        self.params_btns_layout = QHBoxLayout()
+        self.params_btn_insert_body = Buttons("insert body params")
+        self.params_btns_layout.addWidget(self.params_btn_insert_body)
         self.params_btn_change_goals = Buttons("change goals")
-        self.params_goals_layout.addWidget(self.params_btn_change_goals)
-        self.params_goals.setLayout(self.params_goals_layout)
-        self.params_layout.addWidget(self.params_goals)
-        self.params.setLayout(self.params_layout)
-        self.params_tab_layout.addWidget(self.params)
+        self.params_btns_layout.addWidget(self.params_btn_change_goals)
+        self.params_btns.setLayout(self.params_btns_layout)
+        self.params_tab_layout.addWidget(self.params_btns)
         self.params_tab.setLayout(self.params_tab_layout)
         self.tab_widget.addTab(self.params_tab, "params")
         # user tab
@@ -216,7 +207,7 @@ class Home(QMainWindow):
         self.home_btn_gen_plan.clicked.connect(self.generate_trainings_plan)
         self.session_btn_change.clicked.connect(self.change_last_session)
         self.session_btn_insert.clicked.connect(self.insert_session)
-        self.params_btn_insert_body_params.clicked.connect(self.insert_body_params)
+        self.params_btn_insert_body.clicked.connect(self.insert_body_params)
         self.params_btn_change_goals.clicked.connect(self.change_goals)
         self.user_btn_change_user.clicked.connect(self.change_user)
         self.user_btn_new_user.clicked.connect(self.new_user)
